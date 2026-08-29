@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Casio 90s</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="brand">CASIO <span>ELECTRONIC COUNTER</span></div>
+        
+        <div class="screen-container">
+            <div id="display" class="display">0</div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-count" class="btn btn-count">CONTAR</button>
+            <button id="btn-reset" class="btn btn-reset">BORRAR</button>
+        </div>
+    </div>
+
+    <script>
+        // Logica Vanilla JavaScript
+        let count = 0;
+        const display = document.getElementById('display');
+        const btnCount = document.getElementById('btn-count');
+        const btnReset = document.getElementById('btn-reset');
+
+        btnCount.addEventListener('click', () => {
+            count++;
+            display.textContent = count;
+        });
+
+        btnReset.addEventListener('click', () => {
+            count = 0;
+            display.textContent = count;
+        });
+    </script>
+</body>
+</html>
