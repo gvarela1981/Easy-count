@@ -19,23 +19,58 @@
             <button id="btn-count" class="btn btn-count">CONTAR</button>
             <button id="btn-reset" class="btn btn-reset">BORRAR</button>
         </div>
+
+        <div class="timer-container">
+            <div class="timer-label">TIME</div>
+            <div id="timer-display" class="timer-display">00:00</div>
+        </div>
     </div>
 
     <script>
-        // Logica Vanilla JavaScript
         let count = 0;
+        let timerSeconds = 0;
+        let timerInterval = null;
+        let isTimerRunning = false;
+
         const display = document.getElementById('display');
+        const timerDisplay = document.getElementById('timer-display');
         const btnCount = document.getElementById('btn-count');
         const btnReset = document.getElementById('btn-reset');
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+            const secs = (seconds % 60).toString().padStart(2, '0');
+            return `${mins}:${secs}`;
+        }
+
+        function startTimer() {
+            if (!isTimerRunning) {
+                isTimerRunning = true;
+                timerInterval = setInterval(() => {
+                    timerSeconds++;
+                    timerDisplay.textContent = formatTime(timerSeconds);
+                }, 1000);
+            }
+        }
+
+        function stopAndResetTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            isTimerRunning = false;
+            timerSeconds = 0;
+            timerDisplay.textContent = formatTime(0);
+        }
 
         btnCount.addEventListener('click', () => {
             count++;
             display.textContent = count;
+            startTimer();
         });
 
         btnReset.addEventListener('click', () => {
             count = 0;
             display.textContent = count;
+            stopAndResetTimer();
         });
     </script>
 </body>
