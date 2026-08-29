@@ -1,0 +1,100 @@
+/* Importar tipografía estilo display de cuarzo/LCD */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cuerpo de la calculadora (Plástico gris retro) */
+.calculator {
+    background-color: #8c8c8c;
+    border: 4px solid #595959;
+    border-radius: 12px;
+    padding: 25px;
+    width: 260px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 
+                inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+                inset -2px -2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.brand {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.brand span {
+    font-size: 8px;
+    display: block;
+    color: #404040;
+}
+
+/* Pantalla LCD verdosa de la época */
+.screen-container {
+    background-color: #9ead86;
+    border: 3px inset #697359;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.display {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 48px;
+    color: #1a260d;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Layout de los botones */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0px #333, 0 8px 6px rgba(0,0,0,0.4);
+    transition: all 0.05s ease;
+}
+
+.btn:active {
+    box-shadow: 0 2px 0px #333, 0 4px 4px rgba(0,0,0,0.4);
+    transform: translateY(3px);
+}
+
+/* Botón grande: CONTAR */
+.btn-count {
+    width: 100%;
+    height: 65px;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Botón pequeño: BORRAR */
+.btn-reset {
+    width: 60%;
+    height: 35px;
+    background-color: #c93b2b;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+}
