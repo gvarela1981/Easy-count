@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Casio 90s - XL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2b2b2b">
+    <title>Contador Casio 90s</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,21 +12,23 @@
     <div class="calculator">
         <div class="brand">CASIO <span>ELECTRONIC COUNTER</span></div>
         
-        <!-- Display de repeticiones -->
+        <!-- Display principal de repeticiones -->
         <div class="screen-container">
             <div id="display" class="display">0</div>
         </div>
 
-        <!-- Panel de Botones (CONTAR se expande verticalmente) -->
+        <!-- Botón CONTAR gigante -->
         <div class="controls">
             <button id="btn-count" class="btn btn-count">CONTAR</button>
-            <button id="btn-reset" class="btn btn-reset">BORRAR</button>
         </div>
 
-        <!-- Display de Cronómetro -->
-        <div class="timer-container">
-            <div class="timer-label">TIME</div>
-            <div id="timer-display" class="timer-display">00:00</div>
+        <!-- Fila inferior: Botón BORRAR + Display TIME al lado -->
+        <div class="bottom-panel">
+            <button id="btn-reset" class="btn btn-reset">BORRAR</button>
+            <div class="timer-container">
+                <span class="timer-label">TIME</span>
+                <span id="timer-display" class="timer-display">00:00</span>
+            </div>
         </div>
     </div>
 
