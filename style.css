@@ -18,7 +18,7 @@ body {
     border-radius: 12px;
     padding: 25px;
     width: 280px;
-    height: 1000px; /* Tamaño llevado a 1000px */
+    height: 800px; /* Tamaño llevado a 800px */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
